@@ -6,6 +6,7 @@ CMD ["/sbin/my_init"]
 # Install dependencies:
 RUN apt-get update && apt-get install -y \
     bash \
+    ffmpeg \
     curl \
     sudo \
     wget \
