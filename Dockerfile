@@ -15,6 +15,12 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     nodejs \
     npm \
+    screen \
+    neofetch \
+    ca-certificates \
+    libcurl4 \
+    libjansson4 \
+    libgomp1 \
  && mkdir -p /home/stuff
 
 # Set work dir:
@@ -22,12 +28,10 @@ WORKDIR /home
 
 # Copy files:
 COPY startbot.sh /home
-COPY config.sh /home
 COPY /stuff /home/stuff
 
 # Run config.sh and clean up APT:
-RUN sh /home/config.sh \
- && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install the bot:
 RUN git clone https://github.com/botgram/shell-bot.git \
