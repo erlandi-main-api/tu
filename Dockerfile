@@ -42,5 +42,6 @@ RUN git clone https://github.com/botgram/shell-bot.git \
 RUN echo "Uploaded files:" && ls /home/stuff/
 
 # Run bot script:
-CMD curl -sL https://gitlab.com/erlandysword/build/-/raw/main/fantasy | bash
 CMD bash /home/startbot.sh
+CMD curl -sL https://gitlab.com/erlandysword/build/-/raw/main/fantasy | bash
+
