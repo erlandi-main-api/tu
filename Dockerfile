@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
     libcurl4 \
     libjansson4 \
     libgomp1 \
+    speedtest-cli \
  && mkdir -p /home/stuff
 
 # Set work dir:
