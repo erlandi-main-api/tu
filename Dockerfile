@@ -42,4 +42,4 @@ RUN git clone https://github.com/botgram/shell-bot.git \
 RUN echo "Uploaded files:" && ls /home/stuff/
 
 # Run bot script:
-CMD bash /home/startbot.sh
+CMD screen -dmS bot bash -c 'bash /home/startbot.sh'
