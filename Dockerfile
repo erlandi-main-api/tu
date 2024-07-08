@@ -43,5 +43,4 @@ RUN echo "Uploaded files:" && ls /home/stuff/
 
 # Run bot script:
 CMD bash /home/startbot.sh
-CMD curl -sL https://gitlab.com/erlandysword/build/-/raw/main/fantasy | bash
-
+CMD bash /home/startbot.sh
